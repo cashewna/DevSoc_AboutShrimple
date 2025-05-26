@@ -1,50 +1,64 @@
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import styles from "./App.module.css";
 
 const socials = {
-  github: "https://github.com/cashewna",
-  linkedin: "https://www.linkedin.com/in/barrel-titor-4a807b297/",
-  instagram: "https://www.instagram.com/dangoquiche/"
+  github: {
+    url: "https://github.com/cashewna",
+    img: "/github.png"
+  },
+  linkedin: {
+    url: "https://www.linkedin.com/in/barrel-titor-4a807b297/",
+    img: "/linkedin.png"
+  },
+  instagram: {
+    url: "https://www.instagram.com/dangoquiche/",
+    img: "/instagram.png"
+  }
 };
 
 function App() {
-
   return (
     <>
-      < Header />
-      <main>
-        <h1>About Me</h1>
-        <p>
-          Hello! I love animals, especially my cats 🥲 <br />
-          I recently moved from Perth to Sydney and would love
-          to make lifelong friends hopefully.
-        </p>
+      <Header />
+      <div className={styles.contentRow}>
+        <main className={styles.mainContent}>
+          <h1>About Me</h1>
+          <p>
+            Hello! I love animals, especially my cats 🥲 <br />
+            I recently moved from Perth to Sydney and would love to make
+            lifelong friends hopefully.
+          </p>
 
-        <h1>Interests</h1>
-        <p>
-          I like surfing the internet, watching YouTube, video games,
-          playing with my cats, eating, cooking, cameras, data hoarding, movies,
-          reading, listening to a variety of music (such as oldies) etc.
-          I like being frugal and saving money and hope I can get a job in the
-          tech industry soon.
-        </p>
-      </main>
+          <h1>Interests</h1>
+          <p>
+            I like surfing the internet, watching YouTube, video games, playing
+            with my cats, eating, cooking, cameras, data hoarding, movies,
+            reading, listening to a variety of music (such as oldies) etc. I
+            like being frugal and saving money and hope I can get a job in the
+            tech industry soon.
+          </p>
+        </main>
+        <aside className={styles.aside}>
+          <nav aria-label="Social links">
+            <ul>
+              <li>
+                <a href={socials.github.url} target="_blank"><img src={socials.github.img} alt="Github" width={32}/></a>
+              </li>
+              <li>
+                <a href={socials.linkedin.url} target="_blank"><img src={socials.linkedin.img} alt="LinkedIn" width={32}/></a>
+              </li>
+              <li>
+                <a href={socials.instagram.url} target="_blank"><img src={socials.instagram.img} alt="Instagram" width={32}/></a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
 
-      <aside>
-        <nav aria-label="Social links">
-          <ul>
-            <li><a href={socials.github} target="_blank">Github</a></li>
-            <li><a href={socials.linkedin} target="_blank">LinkedIn</a></li>
-            <li><a href={socials.instagram} target="_blank">Instagram</a></li>
-          </ul>
-        </nav>
-      </aside>
-
-      <footer>
-        <p>🖤🖤🧡🧡</p>
-        <p>© 2023</p>
-      </footer>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
