@@ -1,4 +1,4 @@
-import Dango from "../../public/dango.svg";
+import Dango from "../assets/dango.svg";
 import style from "./Header.module.css";
 
 function Header() {
