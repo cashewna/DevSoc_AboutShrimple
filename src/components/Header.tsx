@@ -5,7 +5,7 @@ function Header() {
     return (
         <header className={style.header}>
             <img src={Dango} alt="Dango" width="64rem"/>
-            <h1>Opposites Attract</h1>
+            <h1 className={style.h1}>Opposites Attract</h1>
         </header>
     )
 };

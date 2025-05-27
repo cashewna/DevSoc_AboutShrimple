@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { MagnetGame } from "./components/MagnetGame";
 import styles from "./App.module.css";
 
 const socials = {
@@ -28,6 +29,7 @@ function App() {
             Hello! I love animals, especially my cats 🥲 <br />
             I recently moved from Perth to Sydney and would love to make
             lifelong friends hopefully.
+            I like being plain and shrimple bimple.
           </p>
 
           <h1>Interests</h1>
@@ -38,6 +40,8 @@ function App() {
             like being frugal and saving money and hope I can get a job in the
             tech industry soon.
           </p>
+
+          <MagnetGame />
         </main>
         <aside className={styles.aside}>
           <nav aria-label="Social links">

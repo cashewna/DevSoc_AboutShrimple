@@ -1,6 +1,14 @@
 .header {
     display: grid;
     grid-template-columns: 20% auto;
-    justify-items: center;
     align-items: center;
+    justify-items: center;
+
+    h1 {
+        position: absolute;
+        left: 50%;
+        margin: 1rem;
+        width: max-content;
+        transform: translateX(-50%);
+    }
 }
